@@ -79,8 +79,46 @@ list4_units = ["Units"]
 
 print(df_1[list4_units].head())
 
+list5 = ["Restaurant", "Location", "Sales", "Units"]
+
+print(df_1[list5])
+
 # converting list into arrays through Numpy
 
 array3 = np.array(df_1[list3_sales])
 
 print(array3)
+
+array4 = np.array(df_1[list4_units])
+
+print(array4)
+
+# maximum and minimum sales value
+
+print(array3.min())
+
+print(array3.max())
+
+print(array3.sum())
+
+# mean and standard deviation
+
+print(array3.mean())
+
+print(array3.std())
+
+# Indexing arrays
+
+array1 = np.array(df_1[list5])
+
+print(array1)
+
+indexing = np.array([0,3])
+
+array1_index = array1[indexing]
+
+print(array1_index)
+
+
+
+
