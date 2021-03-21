@@ -1,3 +1,5 @@
+import numpy as np
+
 import pandas as pd
 
 df_1 = pd.read_csv('/Users/siddheshkotian/Documents/Certification Data Analytics/Project Rubric/Data_Set A.csv')
@@ -59,4 +61,26 @@ print(df_1_unique_location_sales.sort_values("Sales", ascending=False))
 print(df_1_unique_location_sales.sort_values("Sales", ascending=False).head())
 
 
+# Creating List
 
+list1 = ["Restaurant", "Location", "Sales"]
+
+print(df_1[list1].head())
+
+list2 = ["Restaurant", "Location", "Sales"]
+
+print(df_1[list1].head())
+
+list3_sales = ["Sales"]
+
+print(df_1[list3_sales].head())
+
+list4_units = ["Units"]
+
+print(df_1[list4_units].head())
+
+# converting list into arrays through Numpy
+
+array3 = np.array(df_1[list3_sales])
+
+print(array3)
