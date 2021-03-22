@@ -119,6 +119,29 @@ array1_index = array1[indexing]
 
 print(array1_index)
 
+# Looping
+
+print("starting the loop example")
+
+filter = ["Restaurant", "Sales"]
+
+Sales_restaurant = df_1[filter]
+
+rest_above_avg = []
+
+rest_below_avg = []
+
+for index, row in Sales_restaurant.iterrows():
+
+    if (row["Sales"]) > 34:
+
+        rest_above_avg.append(row["Restaurant"])
+    else:
+        rest_below_avg.append(row["Restaurant"])
+
+print(rest_above_avg)
+
+print(rest_below_avg)
 
 
 
