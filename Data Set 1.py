@@ -143,5 +143,18 @@ print(rest_above_avg)
 
 print(rest_below_avg)
 
+# Merging dataframes
+
+df_new_1 = df_1[["Restaurant", "Sales"]].copy()
+
+print(df_new_1)
+
+df_new_2 = df_1[["Restaurant", "Units"]].copy()
+
+print(df_new_2)
+
+df_new_3 = df_new_1.merge(df_new_2, on="Restaurant")
+
+print(df_new_3.head(10))
 
 
