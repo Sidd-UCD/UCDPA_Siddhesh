@@ -167,11 +167,15 @@ df_1["Sales"].hist(bins=10)
 
 plt.show()
 
+# Figure 2
+
 avg_sales_per_units = df_1.groupby("Units")["Sales"].mean()
 
 avg_sales_per_units.plot(kind="bar", title="Mean Sales per Units")
 
 plt.show()
+
+# Figure 3
 
 df_1[df_1["Franchising"]=="Yes"]["Units"].plot(kind= "line", color="red", title="Units with and without Franchise")
 
@@ -180,4 +184,6 @@ df_1[df_1["Franchising"]=="No"]["Units"].plot(kind="line", color="blue", title="
 plt.legend(["Yes", "No"])
 
 plt.show()
+
+
 
