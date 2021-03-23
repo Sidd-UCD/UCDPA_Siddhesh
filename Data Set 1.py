@@ -2,6 +2,8 @@ import numpy as np
 
 import pandas as pd
 
+import matplotlib.pyplot as plt
+
 df_1 = pd.read_csv('/Users/siddheshkotian/Documents/Certification Data Analytics/Project Rubric/Data_Set A.csv')
 
 print(df_1)
@@ -157,4 +159,25 @@ df_new_3 = df_new_1.merge(df_new_2, on="Restaurant")
 
 print(df_new_3.head(10))
 
+# Visualization
+
+df_1["Sales"].hist()
+
+df_1["Sales"].hist(bins=10)
+
+plt.show()
+
+avg_sales_per_units = df_1.groupby("Units")["Sales"].mean()
+
+avg_sales_per_units.plot(kind="bar", title="Mean Sales per Units")
+
+plt.show()
+
+df_1[df_1["Franchising"]=="Yes"]["Units"].plot(kind= "line", color="red", title="Units with and without Franchise")
+
+df_1[df_1["Franchising"]=="No"]["Units"].plot(kind="line", color="blue", title="Units with and without Franchise")
+
+plt.legend(["Yes", "No"])
+
+plt.show()
 
